@@ -101,16 +101,14 @@ You get the idea.
 ansible (hostname) -m (module) -a (arguments)
 ```
 
-#### Install git is installed on my machine
+#### Ensure git is up-to-date on my machine
 
-``` bash
-ansible localhost -m dnf -a "name=git state=present"
-```
-
-#### apt-get update && apt-get upgrade
-
-``` bash
-ansible localhost -m dnf -a "name=* state=latest"
+``` plain
+$ ansible localhost -m pacman -a "name=git state=latest"
+localhost | SUCCESS => {
+    "changed": false, 
+    "msg": "package(s) already installed. "
+}
 ```
 
 ---

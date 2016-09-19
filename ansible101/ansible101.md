@@ -145,7 +145,7 @@ ansible localhost -m apt -a "upgrade=dist" # apt-get dist-upgrade
 
 ---
 
-### Even if the packages are from the same category their usage may difer a lot. Remember that if something is not working you may have an argument wrong!
+### Even if the modules are from the same category their usage may difer a lot. Remember that if something is not working you may have an argument wrong!
 
 ###### *it was ensure, state, status...?*
 
@@ -158,10 +158,10 @@ ansible localhost -m apt -a "upgrade=dist" # apt-get dist-upgrade
 Using the same examples as a playbook:
 
 ``` yaml
-- name: Update and upgrade system
+- name: Update and upgrade system # aptitude update && aptitude safe-upgrade
   become: true
   apt: update_cache=yes safe_upgrade=yes
-- name: Ensure git is updated
+- name: Ensure git is updated # aptitude install git
   become: true
   apt: name=git ensure=latest
 ```
@@ -170,6 +170,10 @@ Run it with the command:
 ``` bash
 ansible-playbook localhost playbook.yml
 ```
+
+---
+
+# More slides!
 
 ---
 

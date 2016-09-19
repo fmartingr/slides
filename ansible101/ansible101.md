@@ -6,9 +6,11 @@
 
 ---
 
-# Felipe Martin
+# Who am I?
 
 <img src="http://cdn.fmartingr.com/avatar.png" width="400" style="float: right">
+
+#### Felipe Martin
 
 - 1987
 - CTO at [Saluspot](https://www.saluspot.com)
